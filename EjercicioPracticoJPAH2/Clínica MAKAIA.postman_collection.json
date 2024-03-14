@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "5216e1f6-0c93-486c-95d7-d74b1937fbe7",
+		"name": "Clínica MAKAIA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16910958"
+	},
+	"item": [
+		{
+			"name": "odontólogo",
+			"item": [
+				{
+					"name": "Creación odontólogo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matricula\" : 1,\r\n    \"nombre\": \"Pedro\",\r\n    \"apellido\": \"Joaquín\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/odontologo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"odontologo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminación odontólogo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/odontologo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"odontologo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtención odontólogos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/odontologo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"odontologo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "paciente",
+			"item": [
+				{
+					"name": "Creación paciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\" : 123456789,\r\n    \"nombre\": \"Felipe\",\r\n    \"apellido\": \"Forlan\",\r\n    \"domicilio\" : \"Domicilio 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/paciente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"paciente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminación paciente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/paciente/123456789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"paciente",
+								"123456789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtención pacientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/paciente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"paciente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cita",
+			"item": [
+				{
+					"name": "Asignación cita",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/odontologo/1/paciente/123456789/fecha/2023-12-12/asignar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"odontologo",
+								"1",
+								"paciente",
+								"123456789",
+								"fecha",
+								"2023-12-12",
+								"asignar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
